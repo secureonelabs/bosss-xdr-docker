@@ -13,8 +13,8 @@ Wazuh-Docker offers flexibility in how you can deploy the Wazuh stack. The prima
     * **Cons**: Single point of failure; limited scalability compared to multi-node.
 
 2.  **[Multi Node Wazuh Stack](multi-node.md)**:
-    * **Description**: This typically refers to deploying a Wazuh Indexer cluster and potentially multiple Wazuh managers for improved scalability and resilience. While true multi-host orchestration often uses tools like Kubernetes, this section may cover configurations achievable with Docker Compose, possibly across multiple Docker hosts or with clustered services on a single powerful host.
-    * **Use Cases**: Production environments requiring higher availability, data redundancy (for Wazuh Indexer), and the ability to handle a larger number of agents.
+    * **Description**: This typically refers to deploying a BOSSS XDR Indexer cluster and potentially multiple Wazuh managers for improved scalability and resilience. While true multi-host orchestration often uses tools like Kubernetes, this section may cover configurations achievable with Docker Compose, possibly across multiple Docker hosts or with clustered services on a single powerful host.
+    * **Use Cases**: Production environments requiring higher availability, data redundancy (for BOSSS XDR Indexer), and the ability to handle a larger number of agents.
     * **Pros**: Improved fault tolerance (for clustered components like the Indexer), better performance distribution.
     * **Cons**: More complex to set up and manage than a single-node deployment.
 

@@ -12,7 +12,7 @@ Getting started with Wazuh-Docker involves the following general steps:
 4.  **Obtaining Wazuh-Docker Files**: Cloning the `wazuh-docker` repository or downloading the necessary `docker-compose.yml` and configuration files.
 5.  **Deploying the Stack**: Running `docker compose up` to launch the Wazuh components.
 6.  **Initial Configuration & Verification**: Performing any initial setup steps and verifying that all components are working correctly.
-7.  **Deploying Wazuh Agents**: Installing and configuring Wazuh agents on the endpoints you want to monitor and connecting them to your Wazuh manager.
+7.  **Deploying BOSSS XDR Agents**: Installing and configuring Wazuh agents on the endpoints you want to monitor and connecting them to your Wazuh manager.
 
 ## Before You Begin
 
@@ -40,8 +40,8 @@ Before diving into the deployment, please ensure you have reviewed:
 3.  **Choose Your [Deployment Strategy](deployment/deployment.md)**:
     Wazuh-docker supports different deployment models. Select the one that best fits your use case:
     * **[Single Node Wazuh Stack](deployment/single-node.md)**: Ideal for testing, small environments, or proof-of-concept deployments. All main components (Wazuh manager, Wazuh indexer, Wazuh dashboard) run on a single Docker host.
-    * **[Multi Node Wazuh Stack](deployment/multi-node.md)**: Suitable for production environments requiring high availability and scalability. Components might be distributed across multiple hosts or configured in a clustered mode. (Note: True multi-host orchestration often involves Kubernetes, but multi-node within Docker Compose typically refers to clustered Wazuh Indexer/Manager setups on one or more Docker hosts managed carefully).
-    * **[Wazuh Agent Deployment](deployment/wazuh-agent.md)**: Instructions for deploying Wazuh agents on your endpoints and connecting them to the Wazuh manager running in Docker.
+    * **[Multi Node Wazuh Stack](deployment/multi-node.md)**: Suitable for production environments requiring high availability and scalability. Components might be distributed across multiple hosts or configured in a clustered mode. (Note: True multi-host orchestration often involves Kubernetes, but multi-node within Docker Compose typically refers to clustered BOSSS XDR Indexer/Manager setups on one or more Docker hosts managed carefully).
+    * **[BOSSS XDR Agent Deployment](deployment/wazuh-agent.md)**: Instructions for deploying Wazuh agents on your endpoints and connecting them to the Wazuh manager running in Docker.
 
 4.  **Follow Deployment Instructions**:
     Once you've chosen a deployment strategy, follow the detailed instructions provided in the respective sections linked above. This will typically involve:
@@ -51,7 +51,7 @@ Before diving into the deployment, please ensure you have reviewed:
 
 5.  **Post-Deployment**:
     After the stack is running:
-    * Access the Wazuh Dashboard via your web browser.
+    * Access the BOSSS XDR Dashboard via your web browser.
     * Verify that all services are healthy.
     * Begin enrolling Wazuh agents.
 

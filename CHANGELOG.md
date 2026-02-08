@@ -62,7 +62,7 @@ All notable changes to this project will be documented in this file.
 
 - Add IMAGE_TAG stage reference ([#2176](https://github.com/wazuh/wazuh-docker/pull/2176))
 - Modify run_as parameter value - v4.14.3 ([#2157](https://github.com/wazuh/wazuh-docker/pull/2157))
-- Adapt Wazuh Agent Dockerfile for multi-architecture support ([#2149](https://github.com/wazuh/wazuh-docker/pull/2149))
+- Adapt BOSSS XDR Agent Dockerfile for multi-architecture support ([#2149](https://github.com/wazuh/wazuh-docker/pull/2149))
 - Agent group parameter added ([#2127](https://github.com/wazuh/wazuh-docker/pull/2127))
 - Adapt to multi architecture build ([#2120](https://github.com/wazuh/wazuh-docker/pull/2120))
 
@@ -131,7 +131,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - Change Wazuh indexer directory owner ([#2029](https://github.com/wazuh/wazuh-docker/pull/2029))
-- Double the amount of space consumed in Wazuh Indexer ([#1953](https://github.com/wazuh/wazuh-docker/pull/1953))
+- Double the amount of space consumed in BOSSS XDR Indexer ([#1953](https://github.com/wazuh/wazuh-docker/pull/1953))
 - Fix config directory for opensearch_security plugin work ([#1951](https://github.com/wazuh/wazuh-docker/pull/1951))
 - Update Dockerfile to copy opensearch-security files ([#1928](https://github.com/wazuh/wazuh-docker/pull/1928))
 

@@ -2,9 +2,9 @@
 
 ## Deploying Wazuh Docker in a Single-Node Configuration
 
-This deployment uses the `single-node/docker-compose.yml` file, which defines a setup with one Wazuh Manager, one Wazuh Indexer, and one Wazuh Dashboard container. Follow these steps to deploy it:
+This deployment uses the `single-node/docker-compose.yml` file, which defines a setup with one BOSSS XDR Manager, one BOSSS XDR Indexer, and one BOSSS XDR Dashboard container. Follow these steps to deploy it:
 
-1.  Increase `vm.max_map_count` on each Docker host that will run a Wazuh Indexer container (Linux). This setting is crucial for Wazuh Indexer to operate correctly. This command requires root permissions:
+1.  Increase `vm.max_map_count` on each Docker host that will run a BOSSS XDR Indexer container (Linux). This setting is crucial for BOSSS XDR Indexer to operate correctly. This command requires root permissions:
 
     ```bash
     sudo sysctl -w vm.max_map_count=262144
@@ -66,4 +66,4 @@ This deployment uses the `single-node/docker-compose.yml` file, which defines a 
         docker compose up -d
         ```
 
-Please allow some time for the environment to initialize, especially on the first run. It can take approximately a minute or two (depending on your host's resources) as the Wazuh Indexer starts up and generates the necessary indexes and index patterns.
+Please allow some time for the environment to initialize, especially on the first run. It can take approximately a minute or two (depending on your host's resources) as the BOSSS XDR Indexer starts up and generates the necessary indexes and index patterns.

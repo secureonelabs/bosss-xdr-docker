@@ -31,7 +31,7 @@ This manual is structured to help you find information efficiently:
     -   **[Deployment](getting-started/deployment/README.md)**: Offers instructions for different deployment models:
         -   [Single Node Wazuh Stack](getting-started/deployment/single-node.md)
         -   [Multi Node Wazuh Stack](getting-started/deployment/multi-node.md)
-        -   [Wazuh Agent](getting-started/deployment/wazuh-agent.md)
+        -   [BOSSS XDR Agent](getting-started/deployment/wazuh-agent.md)
 -   **[Configuration](configuration/configuration.md)**: Explains how to customize your Wazuh-Docker deployment.
     -   [Environment Variables](configuration/environment-variables.md)
     -   [Configuration Files](configuration/configuration-files.md)

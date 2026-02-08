@@ -25,4 +25,4 @@ Configuring Wazuh components within a Docker environment typically involves seve
         * Dependencies between services.
 
 4.  **Persistent Data Volumes**:
-    * Configuration related to data storage (e.g., paths for Wazuh Indexer data, Wazuh manager logs and agent keys) is managed through Docker volumes. Persisting these volumes ensures your data and critical configurations survive container restarts or recreations.
+    * Configuration related to data storage (e.g., paths for BOSSS XDR Indexer data, Wazuh manager logs and agent keys) is managed through Docker volumes. Persisting these volumes ensures your data and critical configurations survive container restarts or recreations.

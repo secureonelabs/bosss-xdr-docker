@@ -6,7 +6,7 @@ Check more information on the [Workflow usage](workflow-usage.md) page.
 
 ## Purpose
 
-The main objective of the tests is to verify that the Wazuh Docker environment can be successfully deployed and that all its core components (Wazuh Manager, Indexer, Dashboard, and Agents) operate as expected after any modification in the codebase.
+The main objective of the tests is to verify that the Wazuh Docker environment can be successfully deployed and that all its core components (BOSSS XDR Manager, Indexer, Dashboard, and Agents) operate as expected after any modification in the codebase.
 
 ## When Tests Run
 

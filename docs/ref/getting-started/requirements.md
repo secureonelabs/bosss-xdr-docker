@@ -13,14 +13,14 @@ These are general recommendations. Actual needs may vary based on the number of 
     * **Recommended**: 4 CPU cores or more, especially for production environments or deployments with a significant number of agents.
 * **RAM**:
     * **Minimum (Single-Node Test/Small Environment)**: 4 GB RAM. This is a tight minimum; 6 GB is safer.
-        * Wazuh Indexer (OpenSearch): Typically requires at least 1 GB RAM allocated to its JVM heap.
-        * Wazuh Manager: Resource usage depends on the number of agents.
-        * Wazuh Dashboard (OpenSearch Dashboards): Also consumes memory.
+        * BOSSS XDR Indexer (OpenSearch): Typically requires at least 1 GB RAM allocated to its JVM heap.
+        * BOSSS XDR Manager: Resource usage depends on the number of agents.
+        * BOSSS XDR Dashboard (OpenSearch Dashboards): Also consumes memory.
     * **Recommended (Production/Multiple Agents)**: 8 GB RAM or more.
 * **Disk Space**:
     * **Minimum**: 50 GB of free disk space.
-    * **Recommended**: 100 GB or more, particularly for the Wazuh Indexer data. Disk space requirements will grow over time as more data is collected and indexed.
-    * **Disk Type**: SSDs (Solid State Drives) are highly recommended for the Wazuh Indexer data volumes for optimal performance.
+    * **Recommended**: 100 GB or more, particularly for the BOSSS XDR Indexer data. Disk space requirements will grow over time as more data is collected and indexed.
+    * **Disk Type**: SSDs (Solid State Drives) are highly recommended for the BOSSS XDR Indexer data volumes for optimal performance.
 * **Network**:
     * A stable network connection with sufficient bandwidth, especially if agents are reporting from remote locations.
 
@@ -35,8 +35,8 @@ These are general recommendations. Actual needs may vary based on the number of 
     * Required for cloning the `wazuh-docker` repository.
 * **Web Browser**:
     * A modern web browser (e.g., Chrome, Firefox, Edge, Safari) for accessing the Wazuh dashboard.
-* **`vm.max_map_count` (Linux Hosts for Wazuh Indexer/OpenSearch)**:
-    * The Wazuh Indexer (OpenSearch) requires a higher `vm.max_map_count` setting than the default on most Linux systems.
+* **`vm.max_map_count` (Linux Hosts for BOSSS XDR Indexer/OpenSearch)**:
+    * The BOSSS XDR Indexer (OpenSearch) requires a higher `vm.max_map_count` setting than the default on most Linux systems.
     * Set it permanently:
         1.  Edit `/etc/sysctl.conf` and add/modify the line:
             ```
@@ -46,7 +46,7 @@ These are general recommendations. Actual needs may vary based on the number of 
             ```bash
             sudo sysctl -p
             ```
-    * This is crucial for the stability of the Wazuh Indexer.
+    * This is crucial for the stability of the BOSSS XDR Indexer.
 
 #### Windows:
 
@@ -79,15 +79,15 @@ These are general recommendations. Actual needs may vary based on the number of 
 
 Ensure that the necessary network ports are open and available on the Docker host and any firewalls:
 
-* **Wazuh Manager**:
+* **BOSSS XDR Manager**:
     * `1514/UDP`: For agent communication (syslog).
     * `1514/TCP`: For agent communication (if using TCP).
     * `1515/TCP`: For agent enrollment.
-    * `55000/TCP`: For Wazuh API (default).
-* **Wazuh Indexer**:
+    * `55000/TCP`: For BOSSS XDR API (default).
+* **BOSSS XDR Indexer**:
     * `9200/TCP`: For HTTP REST API.
     * `9300/TCP`: For inter-node communication (if clustered).
-* **Wazuh Dashboard**:
+* **BOSSS XDR Dashboard**:
     * `5601/TCP` (or `443/TCP` if HTTPS is configured via a reverse proxy): For web access.
 
 Port mappings in `docker-compose.yml` will expose these container ports on the host. Adjust host ports if defaults cause conflicts.
@@ -95,6 +95,6 @@ Port mappings in `docker-compose.yml` will expose these container ports on the h
 ## Important Considerations
 
 * **Production Environments**: For production, it's highly recommended to follow best practices for securing Docker and your host system. Consider using a multi-node setup for resilience.
-* **Resource Allocation**: Monitor resource usage after deployment and adjust allocations (CPU, RAM for Docker, JVM heap for Wazuh Indexer) as necessary.
+* **Resource Allocation**: Monitor resource usage after deployment and adjust allocations (CPU, RAM for Docker, JVM heap for BOSSS XDR Indexer) as necessary.
 
 Meeting these requirements will pave the way for a smoother deployment and a more stable Wazuh-Docker experience.

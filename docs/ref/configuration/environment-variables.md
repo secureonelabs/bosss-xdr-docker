@@ -1,23 +1,23 @@
 # Environment Variables in Wazuh Docker Deployment
 
-This document outlines the environment variables applicable to the Wazuh Docker deployment, covering the Wazuh Manager, Indexer, Dashboard, and Agent components. It also explains how to override configuration settings using environment variables.
+This document outlines the environment variables applicable to the Wazuh Docker deployment, covering the BOSSS XDR Manager, Indexer, Dashboard, and Agent components. It also explains how to override configuration settings using environment variables.
 
 ## Table of Contents
 
 - [Environment Variables in Wazuh Docker Deployment](#environment-variables-in-wazuh-docker-deployment)
   - [Table of Contents](#table-of-contents)
-  - [Wazuh Manager](#wazuh-manager)
-  - [Wazuh Indexer](#wazuh-indexer)
-  - [Wazuh Dashboard](#wazuh-dashboard)
-  - [Wazuh Agent](#wazuh-agent)
+  - [BOSSS XDR Manager](#wazuh-manager)
+  - [BOSSS XDR Indexer](#wazuh-indexer)
+  - [BOSSS XDR Dashboard](#wazuh-dashboard)
+  - [BOSSS XDR Agent](#wazuh-agent)
   - [Overriding Configuration Files with Environment Variables](#overriding-configuration-files-with-environment-variables)
     - [Examples:](#examples)
 
 ---
 
-## Wazuh Manager
+## BOSSS XDR Manager
 
-The Wazuh Manager container accepts the following environment variables, which can be set in the `docker-compose.yml` file under the `environment` section:
+The BOSSS XDR Manager container accepts the following environment variables, which can be set in the `docker-compose.yml` file under the `environment` section:
 
 ```yaml
 environment:
@@ -32,16 +32,16 @@ environment:
 
 **Variable Descriptions:**
 
-- `INDEXER_USERNAME` / `INDEXER_PASSWORD`: Credentials for accessing the Wazuh Indexer with `admin` user or a user with the same permissions.
-- `WAZUH_API_URL`: URL of the Wazuh API, used by other services for communication.
-- `DASHBOARD_USERNAME` / `DASHBOARD_PASSWORD`: Credentials for the Wazuh Dashboard to authenticate with the Indexer.
-- `API_USERNAME` / `API_PASSWORD`: Credentials for the Wazuh API user, utilized by the Dashboard for API interactions.
+- `INDEXER_USERNAME` / `INDEXER_PASSWORD`: Credentials for accessing the BOSSS XDR Indexer with `admin` user or a user with the same permissions.
+- `WAZUH_API_URL`: URL of the BOSSS XDR API, used by other services for communication.
+- `DASHBOARD_USERNAME` / `DASHBOARD_PASSWORD`: Credentials for the BOSSS XDR Dashboard to authenticate with the Indexer.
+- `API_USERNAME` / `API_PASSWORD`: Credentials for the BOSSS XDR API user, utilized by the Dashboard for API interactions.
 
 ---
 
-## Wazuh Indexer
+## BOSSS XDR Indexer
 
-The Wazuh Indexer services (`single-node` and `multi-node`) use the following environment variable:
+The BOSSS XDR Indexer services (`single-node` and `multi-node`) use the following environment variable:
 
 ```yaml
 environment:
@@ -54,9 +54,9 @@ environment:
 
 ---
 
-## Wazuh Dashboard
+## BOSSS XDR Dashboard
 
-The Wazuh Dashboard container accepts the following environment variables, which should be set in the `docker-compose.yml` file:
+The BOSSS XDR Dashboard container accepts the following environment variables, which should be set in the `docker-compose.yml` file:
 
 ```yaml
 environment:
@@ -71,18 +71,18 @@ environment:
 
 **Variable Descriptions:**
 
-- `INDEXER_USERNAME` / `INDEXER_PASSWORD`: Credentials used by the Dashboard to authenticate with the Wazuh Indexer.
-- `WAZUH_API_URL`: Base URL of the Wazuh API, used for querying and visualizing security data.
+- `INDEXER_USERNAME` / `INDEXER_PASSWORD`: Credentials used by the Dashboard to authenticate with the BOSSS XDR Indexer.
+- `WAZUH_API_URL`: Base URL of the BOSSS XDR API, used for querying and visualizing security data.
 - `DASHBOARD_USERNAME` / `DASHBOARD_PASSWORD`: User credentials for the Dashboard interface.
-- `API_USERNAME` / `API_PASSWORD`: API user credentials for authenticating Wazuh API requests initiated by the Dashboard.
+- `API_USERNAME` / `API_PASSWORD`: API user credentials for authenticating BOSSS XDR API requests initiated by the Dashboard.
 
-These variables are critical for enabling communication between the Wazuh Dashboard, the Wazuh Indexer, and the Wazuh API.
+These variables are critical for enabling communication between the BOSSS XDR Dashboard, the BOSSS XDR Indexer, and the BOSSS XDR API.
 
 ---
 
-## Wazuh Agent
+## BOSSS XDR Agent
 
-The Wazuh Agent container uses the following environment variables to dynamically update the `ossec.conf` configuration file at runtime:
+The BOSSS XDR Agent container uses the following environment variables to dynamically update the `ossec.conf` configuration file at runtime:
 
 ```yaml
 environment:

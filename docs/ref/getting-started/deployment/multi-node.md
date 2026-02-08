@@ -2,9 +2,9 @@
 
 ## Deploying Wazuh Docker in a Multi-Node Configuration
 
-This deployment utilizes the `multi-node/docker-compose.yml` file, which defines a cluster setup with two Wazuh Manager, three Wazuh Indexer, and one Wazuh Dashboard containers. Follow these steps to deploy this configuration:
+This deployment utilizes the `multi-node/docker-compose.yml` file, which defines a cluster setup with two BOSSS XDR Manager, three BOSSS XDR Indexer, and one BOSSS XDR Dashboard containers. Follow these steps to deploy this configuration:
 
-1.  Increase `vm.max_map_count` on each Docker host that will run a Wazuh Indexer container (Linux). This setting is crucial for Wazuh Indexer to operate correctly. This command requires root permissions:
+1.  Increase `vm.max_map_count` on each Docker host that will run a BOSSS XDR Indexer container (Linux). This setting is crucial for BOSSS XDR Indexer to operate correctly. This command requires root permissions:
 
     ```bash
     sudo sysctl -w vm.max_map_count=262144
@@ -74,4 +74,4 @@ This deployment utilizes the `multi-node/docker-compose.yml` file, which defines
         docker compose up -d
         ```
 
-Please allow some time for the environment to initialize, especially on the first run. A multi-node setup can take a few minutes (depending on your host resources and network) as the Wazuh Indexer cluster forms, and the necessary indexes and index patterns are generated.
+Please allow some time for the environment to initialize, especially on the first run. A multi-node setup can take a few minutes (depending on your host resources and network) as the BOSSS XDR Indexer cluster forms, and the necessary indexes and index patterns are generated.

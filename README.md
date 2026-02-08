@@ -1,15 +1,18 @@
-# Wazuh containers for Docker
+<p align="center">
+    <img width="640px" src="logo.png" alt="BOSSS XDR Docker"/>
+</p>
 
-[![Slack](https://img.shields.io/badge/slack-join-blue.svg)](https://wazuh.com/community/join-us-on-slack/)
-[![Email](https://img.shields.io/badge/email-join-blue.svg)](https://groups.google.com/forum/#!forum/wazuh)
+# BOSSS XDR Docker
+
+> Based on [Wazuh Docker](https://github.com/wazuh/wazuh-docker), open source Docker deployment resources.
 
 ## Description
 
-The `wazuh/wazuh-docker` repository provides resources to deploy the Wazuh cybersecurity platform using Docker containers. This setup enables easy installation and orchestration of the full Wazuh stack, including the Wazuh server, dashboard (based on OpenSearch Dashboards), and OpenSearch for indexing and search.
+This repository provides resources to deploy the BOSSS XDR cybersecurity platform using Docker containers. This setup enables easy installation and orchestration of the full BOSSS XDR stack, including the server, dashboard (based on OpenSearch Dashboards), and OpenSearch for indexing and search.
 
 ## Capabilities
 
-- Full deployment of the Wazuh stack using Docker.
+- Full deployment of the BOSSS XDR stack using Docker.
 - `docker compose` support for orchestration.
 - Scalable architecture with multi-node support.
 - Data persistence through configurable volumes.
@@ -26,33 +29,15 @@ Official documentation is available at:
 
 [https://documentation.wazuh.com/current/deployment-options/docker/index.html](https://documentation.wazuh.com/current/deployment-options/docker/index.html)
 
-You can also explore internal documentation in the [`docs`](https://github.com/wazuh/wazuh-docker/tree/main/docs) folder of this repository.
+## Security
 
-## Get Involved
+If you discover a security vulnerability, please send an email to security@secureonelabs.com.
 
-- **Fork the repository** and create your own branches to add features or fix bugs.
-- **Open issues** to report bugs or request features.
-- **Submit pull requests** following the contributing guidelines.
-- Participate in [discussions](https://github.com/wazuh/wazuh-docker/discussions) if available.
+## License and Copyright
 
-## Authors / Maintainers
+BOSSS XDR Docker Copyright (C) 2017, Wazuh Inc. (License GPLv2)
+Copyright (C) 2024, SecureOneLabs
 
-These Docker containers are based on:
+## Attribution
 
-*  "deviantony" dockerfiles which can be found at [https://github.com/deviantony/docker-elk](https://github.com/deviantony/docker-elk)
-*  "xetus-oss" dockerfiles, which can be found at [https://github.com/xetus-oss/docker-ossec-server](https://github.com/xetus-oss/docker-ossec-server)
-
-This project is maintained by the [Wazuh](https://wazuh.com) team, with active contributions from the community.
-
-See the full list of contributors at:
-[https://github.com/wazuh/wazuh-docker/graphs/contributors](https://github.com/wazuh/wazuh-docker/graphs/contributors)
-
-We thank them and everyone else who has contributed to this project.
-
-## License and copyright
-
-Wazuh Docker Copyright (C) 2017, Wazuh Inc. (License GPLv2)
-
-## Web references
-
-[Wazuh website](http://wazuh.com)
+This project is based on [Wazuh Docker](https://github.com/wazuh/wazuh-docker). See [ATTRIBUTION.md](ATTRIBUTION.md) for details.

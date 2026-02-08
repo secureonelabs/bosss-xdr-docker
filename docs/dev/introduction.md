@@ -35,6 +35,6 @@ Before you begin, it's assumed that you have a basic understanding of:
 -   Docker and Docker Compose.
 -   Linux command-line interface.
 -   Version control systems like Git.
--   The Wazuh platform and its components.
+-   The BOSSS XDR platform and its components.
 
 We encourage you to explore the Wazuh-Docker repository and familiarize yourself with its structure. If you plan to contribute, please also review the project's contribution guidelines.

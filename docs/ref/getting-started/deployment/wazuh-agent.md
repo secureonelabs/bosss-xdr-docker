@@ -1,6 +1,6 @@
 # Wazuh Docker Deployment
 
-## Deploying the Wazuh Agent
+## Deploying the BOSSS XDR Agent
 
 Follow these steps to deploy the Wazuh agent using Docker.
 
